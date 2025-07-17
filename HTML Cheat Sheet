@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Reference Sheet-Forms</title>
+  <link href="./Users/randylohman/Desktop/VS Code Projects/HTML Cheat Sheet/styles.css" rel="stylesheet">
+</head>
+<body>
+  <h1>HTML Reference Sheet</h1>
+  <h2>Forms</h2>
+
+  <!--Elements Table-->
+  <h3 id="ElementsHead">Elements</h3>
+    <table id="Elements">
+    <thead>
+      <tr>
+        <th scope="col">Tag</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+      </tr>
+    </thead>
+
+  <!--Form Element-->
+    <tbody>
+      <tr>
+        <th scope="row">
+          <code>&lt;form&gt;</code>
+        </th>
+        <td>Form</td>
+        <td>
+          Section containing interactive controls for submitting information.
+        </td>
+      </tr>
+
+  <!--Label Element-->
+      <tr>
+        <th scope="row">
+          <code>&lt;label&gt;</code>
+        </th>
+        <td>Label</td>
+        <td>
+          Represents a caption for an item in a user interface.
+        </td>
+      </tr>
+
+  <!--Input Element-->
+      <tr>
+        <th scope="row">
+          <code>&lt;input&gt;</code>
+        </th>
+        <td>Input</td>
+        <td>
+          Creates interactive controls to accept data from the user.
+        </td>
+      </tr>
+      
+  <!--Text Area Element-->
+      <tr>
+        <th scope="row">
+          <code>&lt;textarea&gt;</code>
+        </th>
+        <td>Text Area</td>
+        <td>
+          A multi-line plain text editing control.
+        </td>
+      </tr>
+
+  <!--Select Element-->
+      <tr>
+        <th scope="row">
+          <code>&lt;select&gt;</code>
+        </th>
+        <td>Select</td>
+        <td>
+          Provides a list of 
+          <code>&lt;option&gt;</code> elements that users must select a value from.
+        </td>
+      </tr>
+
+  <!--Datalist Element-->
+      <tr>
+        <th scope="row">
+          <code>&lt;datalist&gt;</code>
+        </th>
+        <td>Datalist</td>
+        <td>
+          Provides a list of 
+          <code>&lt;option&gt;</code> elements that users can either select or type their own value into.
+        </td>
+      </tr>
+
+  <!--Option Element-->
+      <tr>
+        <th scope="row">
+          <code>&lt;option&gt;</code>
+        </th>
+        <td>Option</td>
+        <td>
+          Defines an item contained in a 
+          <code>&lt;select&gt;</code> or 
+          <code>&lt;datalist&gt;</code> element.
+        </td>
+      </tr>
+    </tbody>
+    </table>
+
+
+  <!--Attributes Table-->
+  <h3 id="AttributesHead">Attributes</h3>
+    <table id="Attributes">
+      <tr>
+        <th scope="col">Attribute</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Element Usage</th>
+      </tr>
+
+  <!--ID Attribute-->
+      <tr>
+        <th scope="row">
+          <code>id</code>
+        </th>
+        <td>ID</td>
+        <td>A unique identifier.</td>
+        <td>
+          <code>input</code><br>
+          <code>textarea</code><br>
+          <code>select</code><br>
+          <code>datalist</code>
+        </td>
+      </tr>
+
+  <!--Method Attribute-->
+      <tr>
+        <th scope="row">
+          <code>method</code>
+        </th>
+        <td>Method</td>
+        <td>
+          The method used to submit the form.
+        </td>
+        <td>
+          <code>form</code>
+        </td>
+      </tr>
+
+  <!--Action Attribute-->
+      <tr>
+        <th scope="row">
+          <code>action</code>
+        </th>
+        <td>Action</td>
+        <td>
+          The URL that processes the form submission
+        </td>
+        <td>
+          <code>form</code>
+        </td>
+      </tr>
+
+  <!--For Attribute-->
+      <tr>
+        <th scope="row">
+          <code>for</code>
+        </th>
+        <td>For</td>
+        <td>
+          Associates the <code>label</code> element with the <code>input</code> element. Should match the <code>name</code> attribute in the <code>input</code> element.
+        </td>
+        <td>
+          <code>label</code>
+          </td>
+      </tr>
+
+  <!--Name Attribute-->
+      <tr>
+        <th scope="row">
+          <code>name</code>
+        </th>
+        <td>Name</td>
+        <td>
+          A string specifying a name for the input control. Should match the <code>for</code> attribute in the <code>label</code> element.
+        </td>
+        <td>
+          <code>input</code><br>
+          <code>textarea</code><br>
+          <code>select</code>
+        </td>
+      </tr>
+
+  <!--Type Attribute-->
+      <tr>
+        <th scope="row">
+          <code>type</code>
+        </th>
+        <td>Type</td>
+        <td>
+          The type of control to render for user input.
+        </td>
+        <td>
+          <code>input</code>
+        </td>
+      </tr>
+
+  <!--Value Attribute-->
+      <tr>
+        <th scope="row">
+          <code>value</code>
+        </th>
+        <td>Value</td>
+        <td>
+          The input controls value.
+        </td>
+        <td>
+          <code>input</code>
+        </td>
+      </tr>
+
+  <!--Placeholder Attribute-->
+      <tr>
+        <th scope="row">
+          <code>placeholder</code>
+        </th>
+        <td>Placeholder</td>
+        <td>
+          Provides a brief hint to the user about what type of text to enter.
+        </td>
+        <td>
+          <code>input</code>
+        </td>
+      </tr>
+
+  <!--Required Attribute-->
+      <tr>
+        <th scope="row">
+          <code>required</code>
+        </th>
+        <td>Required</td>
+        <td>
+          Specifies the user must input a value for the input before the form can be submitted
+        </td>
+        <td>
+          <code>input</code>
+        </td>
+      </tr>
+
+  <!--Min / Max Attribute-->
+      <tr>
+        <th scope="row">
+          <code>min</code><br>
+          <code>max</code>
+        </th>
+        <td>
+          Minimum
+          <br>
+          Maximum
+        </td>
+        <td>
+          Specifies the minimum or maximum value that is acceptable and valid for the input.
+        </td>
+        <td>
+          <code>input</code>
+        </td>
+      </tr>
+
+  <!--Minlength / Maxlength Attribute-->
+      <tr>
+        <th scope="row">
+          <code>maxlength</code><br>
+          <code>minlength</code>
+        </th>
+        <td>
+          Maximum Length<br>
+          Minimum Length
+        </td>
+        <td>
+          The minimum or maximum number of characters that is acceptable and valid for the input
+        </td>
+        <td>
+          <code>input</code><br>
+          <code>textarea</code>
+        </td>
+      </tr>
+
+  <!--Step Attribute-->
+      <tr>
+        <th scope="row">
+          <code>step</code>
+        </th>
+        <td>Step</td>
+        <td>
+          A number that specifies the granularity that the value must adhere to
+        </td>
+        <td>
+          <code>input</code>
+        </td>
+      </tr>
+    </table>
+  
+
+  <!--Input Types Table-->
+  <h3 id="InputHead">Input Types</h3>
+    <table id="Input">
+      <tr>
+        <th scope="col">Input Type</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Attribute Usage</th>
+        <th scope="col">Example</th>
+      </tr>
+  
+  <!--Checkbox Input-->
+      <tr>
+        <th scope="row">
+          <code>checkbox</code>
+        </th>
+        <td>Checkbox</td>
+        <td>
+          Lets the user select/deselect multiple options using a checkbox
+        </td>
+        <td>
+          <code>required</code><br>
+          <code>value</code>
+        </td>
+        <td>
+          <div>
+            <label for="Choice 1">Choice 1</label>
+            <input type="checkbox" name="checkbox" value="Choice 1">
+          </div>
+          <br>
+          <div>
+            <label for="Choice 2">Choice 2</label>
+            <input type="checkbox" name="checkbox" value="Choice 2">
+          </div>
+        </td>
+      </tr>
+  <!--Color Input-->
+      <tr>
+        <th scope="row">
+          <code>color</code>
+        </th>
+        <td>Color</td>
+        <td>
+          Lets the user specify a color.
+        </td>
+        <td></td>
+        <td>
+          <input type="color">
+        </td>
+      </tr>
+
+  <!--Datalist Element-->
+      <tr>
+        <th scope="row">
+          <code>&lt;datalist&gt;</code>
+        </th>
+        <td>Datalist Element</td>
+        <td>
+          Lets the user select from a menu of options or write their own value. Can be used with color input option.
+        </td>
+        <td></td>
+        <td>
+          <input list="animals">
+          <datalist id="animals">
+            <option value="Cow">Cow</option>
+            <option value="Horse">Horse</option>
+            <option value="Goat">Goat</option>
+            <option value="Pig">Pig</option>
+            <option value="Sheep">Sheep</option>
+          </datalist>
+        </td>
+      </tr>
+
+  <!--Date Input-->
+      <tr>
+        <th scope="row">
+          <code>date</code>
+        </th>
+        <td>Date</td>
+        <td>
+          Lets the user enter a date.
+        </td>
+        <td>
+          <code>max</code><br>
+          <code>min</code><br>
+          <code>required</code>
+        </td>
+        <td>
+          <input type="date">
+        </td>
+      </tr>
+
+  <!--E-Mail Input-->
+      <tr>
+        <th scope="row">
+          <code>email</code>
+        </th>
+        <td>E-Mail</td>
+        <td>
+          Lets the user enter and edit an email address.
+        </td>
+        <td>
+          <code>maxlength</code><br>
+          <code>minlength</code><br>
+          <code>placeholder</code><br>
+          <code>required</code>
+        </td>
+        <td>
+          <input type="email" placeholder="Enter E-Mail Address">
+        </td>
+      </tr>
+
+  <!--Number Input-->
+      <tr>
+        <th scope="row">
+          <code>number</code>
+        </th>
+        <td>Number</td>
+        <td>
+          Lets the user enter a number.
+        </td>
+        <td>
+          <code>max</code><br>
+          <code>min</code><br>
+          <code>placeholder</code><br>
+          <code>required</code><br>
+          <code>step</code><br>
+        </td>
+        <td>
+          <input type="number" min="1" max="20" step="1" placeholder="1">
+        </td>
+      </tr>
+
+  <!--Password Input-->
+      <tr>
+        <th scope="row">
+          <code>password</code>
+        </th>
+        <td>Password</td>
+        <td>
+          Lets the user securely enter a password.
+        </td>
+        <td>
+          <code>maxlength</code><br>
+          <code>minlength</code><br>
+          <code>placeholder</code><br>
+          <code>required</code>
+        </td>
+        <td>
+          <input type="password" minlength="8" maxlength="20" placeholder="password"
+          required>
+        </td>
+      </tr>
+      
+  <!--Radio Input-->
+      <tr>
+        <th scope="row">
+          <code>radio</code>
+        </th>
+        <td>Radio</td>
+        <td>
+          Lets the user select only 1 option in a given group.
+        </td>
+        <td>
+          <code>required</code>
+          <code>value</code>
+        </td>
+        <td>
+          <div>
+            <label for="Choice 1">Choice 1</label>
+            <input type="radio" name="radio" value="Choice 1">
+          </div>
+          <br>
+          <div>
+            <label for="Choice 2">Choice 2</label>
+            <input type="radio" name="radio" value="Choice 2">
+          </div>
+        </td>
+      </tr>
+    
+  <!--Range Input-->
+      <tr>
+        <th scope="row">
+          <code>range</code>
+        </th>
+        <td>Range</td>
+        <td>
+          Lets the user enter a numeric value using a slider or dial control.
+        </td>
+        <td>
+          <code>max</code><br>
+          <code>min</code><br>
+          <code>step</code><br>
+          <code>value</code><br>
+        </td>
+        <td>
+          <input type="range" min="10" max="100" step="10" value="50">
+        </td>
+      </tr>
+
+  <!--Select Element-->
+      <tr>
+        <th scope="row">
+          <code>&lt;select&gt;</code>
+        </th>
+        <td>Select Element</td>
+        <td>
+          Lets the user select from a menu of options
+        </td>
+        <td>
+          <code>multiple</code>
+        </td>
+        <td>
+          <label for="select"></label>
+          <select name="select">
+            <option value="">--Please choose an option--</option>
+            <option value="Option 1">Option 1</option>
+            <option value="Option 2">Option 2</option>
+            <option value="Option 3">Option 3</option>
+            <option value="Option 4">Option 4</option>
+            <option value="Option 5">Option 5</option>
+            <option value="Option 6">Option 6</option>
+          </select>
+        </td>
+      </tr>
+
+  <!--Submit Input-->
+      <tr>
+        <th scope="row">
+          <code>submit</code>
+        </th>
+        <td>Submit</td>
+        <td>
+          Lets the user submit the form
+        </td>
+        <td>
+          <code>value</code>
+        </td>
+        <td>
+          <input type="submit" value="Submit">
+        </td>
+      </tr>
+
+  <!--Telephone Input-->
+      <tr>
+        <th scope="row">
+          <code>tel</code>
+        </th>
+        <td>Telephone Number</td>
+        <td>
+          Lets a user enter and edit a telephone number
+        </td>
+        <td>
+          <code>maxlength</code><br>
+          <code>minlength</code><br>
+          <code>pattern</code><br>
+          <code>placeholder</code>
+        </td>
+        <td>
+          <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+        </td>
+      </tr>
+
+  <!--Text Area Element-->
+      <tr>
+        <th scope="row">
+          <code>&lt;textarea&gt;</code>
+        </th>
+        <td>Text Area Element</td>
+        <td>
+          Lets the user enter a sizable amount of freeform text. Multi-line text fields
+        </td>
+        <td>
+          <code>row</code><br>
+          <code>col</code>
+        </td>
+        <td>
+          <textarea row="3" col="20"></textarea>
+        </td>
+      </tr>
+
+  <!--Text Input-->
+      <tr>
+        <th scope="row">
+          <code>text</code>
+        </th>
+        <td>Text</td>
+        <td>
+          Lets the user enter a limited amount of freeform text. Basic sinle-line text fields.
+        </td>
+        <td>
+          <code>maxlength</code><br>
+          <code>minlength</code><br>
+          <code>pattern</code><br>
+          <code>placeholder</code><br>
+          <code>required</code><br>
+          <code>size</code>
+        </td>
+        <td>
+          <input type="text" maxlength="15" minlength="1" placeholder="Name" required size="20">
+        </td>
+      </tr>
+    </table>
+</body>
+</html>
+      
